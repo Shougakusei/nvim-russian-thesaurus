@@ -1,3 +1,11 @@
+-- Предзагрузка зависимостей query.lua под именами, которые он ожидает.
+package.preload["nvim-russian-thesaurus.data"] = function()
+  return require("lua.nvim-russian-thesaurus.data")
+end
+package.preload["nvim-russian-thesaurus.morph"] = function()
+  return require("lua.nvim-russian-thesaurus.morph")
+end
+
 describe("nvim-russian-thesaurus.query", function()
   local query = require("lua.nvim-russian-thesaurus.query")
 
